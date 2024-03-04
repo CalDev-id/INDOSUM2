@@ -26,7 +26,8 @@ class Preprocessor():
                 with open(f"{self.indosum_dir}/{fl}", "r", encoding = "utf-8") as json_reader:
                     # load file jsonl (jsonl = kumpulan file json format di gabung jadi satu file)
                     
-                    data_raw = json_reader.readlines()                   
+                    data_raw = json_reader.readlines()
+                    # print(data_raw[0])                   
                     # json_raw = [json.loads(jline) for jline in json_reader.readlines().rstrip().splitlines()]
                 
                 json_raw = []  
