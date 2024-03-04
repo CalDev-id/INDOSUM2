@@ -5,6 +5,17 @@ class Preprocessor():
     def __init__(self):
         self.indosum = 'indosum'
 
+    def join_paragraph(self, paragraphs):
+        string_paragraph = ""
+        for parag in paragraphs:
+            for kal in parag:
+                print(kal)
+                kalimat = " ".join(kal)
+                string_paragraph += kalimat
+                
+        print(string_paragraph)
+        return string_paragraph
+
     def load_data(self, flag):
         list_files = os.listdir(self.indosum)
         datasets = []
@@ -33,17 +44,6 @@ class Preprocessor():
 
         print(len(datasets))
         return datasets
-
-    def join_paragraph(self, paragraphs):
-        string_paragraph = ""
-        for parag in paragraphs:
-            for kal in parag:
-                print(kal)
-                kalimat = " ".join(kal)
-                string_paragraph += kalimat
-                
-        print(string_paragraph)
-        return string_paragraph
 
 if __name__ == '__main__':
     pre = Preprocessor()
